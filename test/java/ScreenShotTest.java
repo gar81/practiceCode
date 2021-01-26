@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.testng.annotations.Test;
 
 import testBase.BaseClass;
-import utility.ScreenShotUtil;
+import utility.ScreenShotHighlightUtil;
 
 public class ScreenShotTest extends BaseClass
 {
@@ -14,7 +14,8 @@ public class ScreenShotTest extends BaseClass
 	public void myscreen_shot() throws IOException
 	{
 		driver.get("https://www.facebook.com/r.php");
-		ScreenShotUtil.screen_shot("FBScrnshot");
 
+		ScreenShotHighlightUtil.captureScreenshot(driver, "Facebook");
+		ScreenShotHighlightUtil.captureScreenshot(driver, "Facebook");
 	}
 }

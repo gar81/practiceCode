@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class ScrollUtil
 {
-	public static WebDriver driver;
+	
 
 	public static void scrolldown(WebDriver driver)
 	{

@@ -4,11 +4,11 @@ import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 
+import testBase.BaseClass;
+
 public class WindowPopUpUtil
 {
-	public static WebDriver driver;
-
-	public static void winPopUp() throws InterruptedException
+	public static void winPopUp(WebDriver driver) throws InterruptedException
 	{
 		String parentWindow = driver.getWindowHandle();
 		System.out.println("window id is :" + parentWindow);

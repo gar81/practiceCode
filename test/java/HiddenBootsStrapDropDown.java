@@ -42,7 +42,7 @@ class HiddenBootsStrapDropDown extends BaseClass
 		robot.keyRelease(KeyEvent.VK_ENTER);
 
 		// validate
-		actual = state.getText();
+		actual = driver.findElement(By.xpath("//div[@class=' css-1uccc91-singleValue']")).getText();
 		System.out.println("Test after Selection" + actual);
 		expected = "Haryana";
 		Assert.assertEquals(actual, expected);
@@ -53,11 +53,10 @@ class HiddenBootsStrapDropDown extends BaseClass
 	public void nextList()
 	{
 		driver.get("https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html");
-		WebElement day_dropDown = driver.findElement(By.id("select-demo"));
-		// String arr[]= {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-		// "Friday", "Saturday"};
+		WebElement dayDropDown = driver.findElement(By.id("select-demo"));
+		String arr[]= {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"};
 
-		Select select = new Select(day_dropDown);
+		Select select = new Select(dayDropDown);
 
 		List<String> firstList = new ArrayList<String>();
 		List<WebElement> dayList = select.getOptions();
@@ -75,12 +74,18 @@ class HiddenBootsStrapDropDown extends BaseClass
 			/*
 			 * if (text.equalsIgnoreCase("Tuesday")) { dayList.get(i).click(); break; }
 			 */
+			if(text !=null)
+			{
+				
+			}
 
-			List<Integer> anotherList = new ArrayList<Integer>();
+			List<String> anotherList = new ArrayList<String>();
 			anotherList.addAll(firstList);
 			Collections.sort(anotherList); // ascending order
 			// Collections.sort(anotherList, Collections.reverseOrder());
-			Assert.assertTrue(firstList.equals(anotherList));
+//			Assert.assertTrue(firstList.equals(anotherList));
+			
+			Assert.assertEquals(firstList, anotherList);
 		}
 
 	}

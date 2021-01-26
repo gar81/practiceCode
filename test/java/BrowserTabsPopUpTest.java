@@ -11,7 +11,7 @@ public class BrowserTabsPopUpTest extends BaseClass
 	{   
 		driver.get("http://seleniumpractise.blogspot.com/2017/07/multiple-window-examples.html");
 		driver.findElement(By.xpath("//a[contains(@href, 'http://www.google.com')]")).click();		
-		WindowPopUpUtil.winPopUp();
+		WindowPopUpUtil.winPopUp(driver);
 	}
 
 }
