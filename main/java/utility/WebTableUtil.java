@@ -32,54 +32,26 @@ public class WebTableUtil
 		} // *[@id="customers"]/tbody/tr[2]/td[1]
 
 	}
-	
-	
-	
-	public static void webTablecols(WebDriver driver) {
-		
+
+	public static void webTablecols(WebDriver driver)
+	{
+
 		List<WebElement> cols = driver.findElements(By.xpath("//*[@id=\"customers\"]/tbody/tr[1]/th"));
 		int colCount = cols.size();
 		System.out.println("total rows in web table :" + colCount);
 
 		String beforeXpath = "//*[@id='customers']/tbody/tr[1]/th[";
 		String afterXpath = "]";
-		
+
 		for (int i = 2; i <= colCount; i++)
 		{
 			String actualxpath = beforeXpath + i + afterXpath;
 			WebElement ele1 = driver.findElement(By.xpath(actualxpath));
-			String colText= ele1.getText();
-			System.out.println("col values are :" +colText);
+			String colText = ele1.getText();
+			System.out.println("col values are :" + colText);
 
-		} 
+		}
 
 	}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
