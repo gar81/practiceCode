@@ -9,6 +9,7 @@ public class WebTableTest extends BaseClass
 	public void web()
 	{
       driver.get("https://www.w3schools.com/html/html_tables.asp");
-      WebTableUtil.webTablerow(driver);
+      WebTableUtil.webTable(driver);
+      WebTableUtil.webTablecols(driver);
 	}
 }
