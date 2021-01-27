@@ -17,15 +17,13 @@ import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
 public class CompaImgUtil
 {
-	public static String ashotImgs(Webdriver driver, scrshotName)
-	{
-		
-		WebElement logo = driver.findElement(By.linkText("//div[@id='divLogo']/img"));
+	public static String ashotImgs(WebDriver driver, WebElement element) throws IOException
+	{	
 
-		Screenshot logoScreenShot = new AShot().takeScreenshot(driver, logo);
-		ImageIO.write(logoScreenShot.getImage(), "png", new File("C:\\logos"));
+		Screenshot logoScreenShot = new AShot().takeScreenshot(driver, element);
+		ImageIO.write(logoScreenShot.getImage(), "png", new File("C:\\element"));
 
-		File f = new File("C:\\logos");
+		File f = new File("C:\\element");
 		if (f.exists())
 		{
 			System.out.println("file captured");
@@ -33,15 +31,14 @@ public class CompaImgUtil
 		{
 			System.out.println("file doesnt exist");
 		}
+		return null;
 	}
 
 	
-	public static String imgsCompare(WebDriver driver, scrshotName ) throws IOException
-	{
-		
-		WebElement logo = driver.findElement(By.linkText("//div[@id='divLogo']/img"));
+	public static String imgsCompare(WebDriver driver, WebElement element ) throws IOException
+	{		
 
-		Screenshot logoScreenShot = new AShot().takeScreenshot(driver, logo);
+		Screenshot logoScreenShot = new AShot().takeScreenshot(driver, element);
 		BufferedImage expectedImg = ImageIO.read(new File("C:\\logos"));
 
 		WebElement logImg = driver.findElement(By.linkText("//div[@id='divLogo']/img"));

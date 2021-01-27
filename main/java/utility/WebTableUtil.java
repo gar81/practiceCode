@@ -1,5 +1,7 @@
 package utility;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -17,19 +19,27 @@ public class WebTableUtil
 
 		String beforeXpath = "//*[@id='customers']/tbody/tr[";
 		String afterXpath = "]/td[1]";
-
+		int count = 0;
+		List<String> firstList = new ArrayList<String>();
 		for (int i = 2; i <= rowCount; i++)
 		{
 			String actualxpath = beforeXpath + i + afterXpath;
 			WebElement ele = driver.findElement(By.xpath(actualxpath));
+			count++;
 			System.out.println(ele.getText());
+			System.out.println("total elements in first column of the table :" + count);
+			String textList = ele.getText();
+
+			firstList.add(textList);
+			System.out.println(Collections.sort(firstList));
+			
 			if (ele.getText().equals("Island Trading"))
 			{
 				System.out.println("company name :" + ele.getText() + " is found" + "at position: " + (i - 1));
 				break;
 			}
 
-		} // *[@id="customers"]/tbody/tr[2]/td[1]
+		}
 
 	}
 

@@ -1,27 +1,30 @@
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.comparison.ImageDiff;
-import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import testBase.BaseClass;
 import utility.CompaImgUtil;
 
 public class CompareImgsTest extends BaseClass
 {
-	
-	//@Test(priority=1)
-	public String imgCompare()
-	driver.get("https://opensource-demo.orangehrmlive.com/");
-	CompaImgUtil.ashotImgs(driver);
-	CompaImgUtil.imgsCompare(driver);
+
+	@Test(priority = 1, enabled= true)
+	public String imgCompare1() throws IOException
+	{
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		WebElement logo = driver.findElement(By.linkText("//div[@id='divLogo']/img"));
+		return CompaImgUtil.ashotImgs(driver, logo);
+
+	}
+
+	@Test(priority = 2, enabled= false)
+	public String imgCompare() throws IOException
+	{
+		driver.get("https://opensource-demo.orangehrmlive.com/");
+		WebElement newlogo = driver.findElement(By.linkText("//div[@id='divLogo']/img"));
+		return CompaImgUtil.imgsCompare(driver, newlogo);
+}
 	
 }

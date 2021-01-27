@@ -1,12 +1,9 @@
-import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import testBase.BaseClass;
+import utility.MouseActionUtil;
 
 //mousehover using action class
 
@@ -16,14 +13,8 @@ public class MouseHoverTest extends BaseClass
 	public void mouseHover()
 	{
 		driver.get("https://www.ebay.com/");
-		Actions action = new Actions(driver);
-		action.moveToElement(driver.findElement(By.linkText("Electronics"))).build().perform();
-
-		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		//wait.until(ExpectedConditions.invisibilityOfElementLocated(By.linkText("Smart Watches")));
-
-		action.moveToElement(driver.findElement(By.linkText("Smart Watches")));
-		action.click().build().perform();
+		WebElement e= driver.findElement(By.linkText("Electronics"));
+		MouseActionUtil.mouseHover(driver, e);
 
 	}
 
