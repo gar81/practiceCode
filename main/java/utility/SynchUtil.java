@@ -11,17 +11,18 @@ public class SynchUtil
 	public static long IMPLICIT_WAIT = 10;
 	public static long SETSCRIPT_TIMEOUT = 40;
 
-	public static void dynamicwaitforVisivibilty(WebDriver driver, WebElement element, long timeout)
+	public static void dynamicwaitforVisivibilty(WebDriver driver, WebElement newEle1, long timeout)
 	{
 
-		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(element));
+		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(newEle1));
 
 	}
+	
 
-	public static void dynamicwaitforClickabilty(WebDriver driver, WebElement element, long timeout)
+	public static void dynamicwaitforClickabilty(WebDriver driver, WebElement newEle1, long timeout)
 	{
 
-		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
+		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(newEle1));
 
 	}
 }

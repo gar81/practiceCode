@@ -12,9 +12,9 @@ public class MouseActionUtil
 
 		Actions action = new Actions(driver);
 		action.moveToElement(element).build().perform();
-		
-		WebElement newEle= driver.findElement(By.linkText("Smart Watches"));		
-		SynchUtil.dynamicwaitforVisivibilty(driver, newEle, 500);		
+
+		WebElement newEle = driver.findElement(By.linkText("Smart Watches"));
+		SynchUtil.dynamicwaitforVisivibilty(driver, newEle, 500);// wait method call here.
 
 		action.moveToElement(newEle);
 		action.click().build().perform();

@@ -42,11 +42,5 @@ public class HiddenDropDownUti
 		expected = "Haryana";
 		Assert.assertEquals(actual, expected);
 
-	}
-
-	
-
-
-
-}
+	}}
 
