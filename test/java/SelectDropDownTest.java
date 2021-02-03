@@ -1,3 +1,5 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import testBase.BaseClass;
@@ -9,10 +11,10 @@ public class SelectDropDownTest extends BaseClass
 	public void signselectDropdown()
 	{
 		driver.get("https://www.facebook.com/r.php");
-
 		String monthList = "//select[@id='month']//option";
-		SelectDropDownUtil.selectd(driver, monthList, "May");
-
+		WebElement ddelement=driver.findElement(By.xpath(monthList));
+//		SelectDropDownUtil.selectd(driver, monthList, "May");
+		SelectDropDownUtil.selectDDValue(driver, ddelement, "May");
 	}
 
 }

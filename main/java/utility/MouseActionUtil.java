@@ -7,17 +7,31 @@ import org.openqa.selenium.interactions.Actions;
 
 public class MouseActionUtil
 {
-	public static void mouseHover(WebDriver driver, WebElement element)
+//	public static void mouseHover(WebDriver driver, WebElement element)
+//	{
+//
+//		Actions action = new Actions(driver);
+//		action.moveToElement(element).build().perform();
+//
+//		WebElement newEle = driver.findElement(By.linkText("Smart Watches"));
+//		SynchUtil.dynamicwaitforVisivibilty(driver, newEle, 500);// wait method call here.
+//
+//		action.moveToElement(newEle);
+//		action.click().build().perform();
+//	}
+	
+	public static void mouseHover(WebDriver driver, WebElement elementToHover)
 	{
-
 		Actions action = new Actions(driver);
-		action.moveToElement(element).build().perform();
-
-		WebElement newEle = driver.findElement(By.linkText("Smart Watches"));
-		SynchUtil.dynamicwaitforVisivibilty(driver, newEle, 500);// wait method call here.
-
-		action.moveToElement(newEle);
-		action.click().build().perform();
+		action.moveToElement(elementToHover).perform();
+	}
+	
+	public static void mouseHoverAndClick(WebDriver driver, WebElement elementToHover,WebElement elementToClick)
+	{
+		Actions action = new Actions(driver);
+		action.moveToElement(elementToHover).build().perform();
+		action.click(elementToClick).build().perform();
+	
 	}
 
 }

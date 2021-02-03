@@ -34,11 +34,10 @@ public class ScreenShotHighlightUtil
 
 	// utility to take scrnshot of an element
 	
-		public static String captureScreenshot2(WebDriver driver, WebElement ele1)
+		public static String captureScreenshot2(WebDriver driver, WebElement ele1, String scrrenshotName)
 		{
 			File source = ((TakesScreenshot) ele1).getScreenshotAs(OutputType.FILE);
-			String path = "./Screenshots/" + new SimpleDateFormat("yyyy_MM_dd__hh_mm_ss").format(new Date())
-					+ ele1+ ".png";
+			String path = "./Screenshots/" + new SimpleDateFormat("yyyy_MM_dd__hh_mm_ss").format(new Date())+ scrrenshotName+ ".png";
 
 			try
 			{

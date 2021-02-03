@@ -8,7 +8,7 @@ public class ScrollUtil
 {
 	
 
-	public static void scrolldown(WebDriver driver)
+	/*public static void scrolldown(WebDriver driver)
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)"); // scrolling down the webpage.
@@ -18,7 +18,7 @@ public class ScrollUtil
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("scroll(0,"+(pixel)+");"); // scrolling down the webpage.
-	}
+	}*/
 	
 	
 	public static void scrolltoElement(WebDriver driver, WebElement element)
