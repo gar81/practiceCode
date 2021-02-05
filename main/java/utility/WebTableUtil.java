@@ -31,7 +31,7 @@ public class WebTableUtil
 			String textList = ele.getText();
 
 			firstList.add(textList);
-			System.out.println(Collections.sort(firstList));
+			//System.out.println(Collections.sort(firstList));
 			
 			if (ele.getText().equals("Island Trading"))
 			{

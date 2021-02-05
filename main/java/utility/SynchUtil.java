@@ -25,4 +25,19 @@ public class SynchUtil
 		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(newEle1));
 
 	}
+	
+	
+	/*public static void dynamicwaitforClickabilty(WebDriver driver, WebElement element1, element2, long timeout)
+	{
+
+		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element1));
+
+	}*/
+	
+	
+	
+	
+	
+	
+	
 }

@@ -4,8 +4,6 @@ import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 
-import testBase.BaseClass;
-
 public class WindowPopUpUtil
 {
 	public static void winPopUp(WebDriver driver) throws InterruptedException
