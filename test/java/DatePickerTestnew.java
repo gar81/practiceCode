@@ -11,9 +11,8 @@ public class DatePickerTestnew extends BaseClass
 	public void datePicker()
 	{
 		driver.get("http://demo.automationtesting.in/Datepicker.html");
-		driver.findElement(By.xpath("//img[@class='imgdp']")).click();	
+		driver.findElement(By.xpath("//img[@class='imgdp']")).click();		
 		
-		//String date = "2-September-2021";
 		String date = "10-January-2020";
 		String[] dateArray = date.split("-");
 		String day = dateArray[0];
@@ -26,7 +25,7 @@ public class DatePickerTestnew extends BaseClass
 		WebElement monthNext = driver.findElement(By.xpath("//span[text()= 'Next']"));
 		WebElement monthPrevious = driver.findElement(By.xpath("//span[text()= 'Prev']"));		
 		
-		DatePickerUtil.DatePick(driver, calenderMonth, calenderYear, month, year,monthNext);	
-		DatePickerUtil.DatePick(driver, calenderMonth, calenderYear, month, year, monthPrevious);	
+		DatePickerUtil.DatePick(driver, calenderMonth, calenderYear, day, month, year,monthNext);	
+		DatePickerUtil.DatePick(driver, calenderMonth, calenderYear, day, month, year, monthPrevious);	
 	}
 }
