@@ -13,11 +13,10 @@ public class FBLoginTest extends BaseClass
 	{
 		driver.get("https://www.facebook.com/r.php");
 		
-		String firstName = "//input[@name='firstname']";
-		//WebElement lastName = driver.findElement(By.xpath("//input[@id='u_0_l']"));
+		String firstName = "//input[@name='firstname']";		
 		WebElement firnameWebElemnet = driver.findElement(By.xpath(firstName)); // click signup
         FBLoginUtil.signUp(driver, firnameWebElemnet, "Sam");
-		//firnameWebElemnet.sendKeys("sam");
+		
 		
 	}
 

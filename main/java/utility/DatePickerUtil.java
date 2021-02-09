@@ -13,7 +13,7 @@ public class DatePickerUtil
 
 		String[] monthNames =
 		{ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November",
-				"December" };
+				"December"};
 
 		String calendermonthText = calenderMonthEle.getText();
 		String calenderyearText = calenderYearEle.getText();
@@ -39,7 +39,7 @@ public class DatePickerUtil
 
 			}
 
-		} else if (year2Tocompare <= year1Tocompare && month2Tocompare <= month1Tocompare)
+		} /*else if (year2Tocompare <= year1Tocompare && month2Tocompare <= month1Tocompare)
 		{
 
 			while (true)
@@ -54,6 +54,6 @@ public class DatePickerUtil
 				NextPreviousEle.click(); // click on previous btn
 			}
 
-		}
+		}*/
 	}
 }

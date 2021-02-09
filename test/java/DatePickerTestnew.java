@@ -26,6 +26,6 @@ public class DatePickerTestnew extends BaseClass
 		WebElement monthPrevious = driver.findElement(By.xpath("//span[text()= 'Prev']"));		
 		
 		DatePickerUtil.DatePick(driver, calenderMonth, calenderYear, day, month, year,monthNext);	
-		DatePickerUtil.DatePick(driver, calenderMonth, calenderYear, day, month, year, monthPrevious);	
+		//DatePickerUtil.DatePick(driver, calenderMonth, calenderYear, day, month, year, monthPrevious);	
 	}
 }

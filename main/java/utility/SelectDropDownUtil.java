@@ -30,5 +30,6 @@ public class SelectDropDownUtil
 	{
 		Select dropDown=new Select(element);
 		dropDown.selectByVisibleText(value);
+		System.out.println(dropDown.isMultiple());
 	}
 }
