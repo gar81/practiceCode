@@ -20,7 +20,7 @@ public class WindowPopUpUtil
 
 				driver.switchTo().window(s);
 				System.out.println(driver.getTitle());
-				Thread.sleep(3000);
+				Thread.sleep(3000);// hard wait
 				driver.close();
 			}
 
